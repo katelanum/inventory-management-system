@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Stage?>
+
+<Stage minHeight="1000.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ProductScreenController">
+    <scene>
+        <Scene>
+            <AnchorPane prefHeight="750.0" prefWidth="900.0">
+            <children>
+               <Pane fx:id="productPane" layoutX="43.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0">
+                  <children>
+                     <Region layoutY="6.0" prefHeight="725.0" prefWidth="971.0" style="-fx-border-color: black; -fx-border-radius: 10;" />
+                     <Text fx:id="productTitleText" fill="#1267e5" layoutX="39.0" layoutY="55.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.125" text="Add Product" wrappingWidth="150.005859375">
+                        <font>
+                           <Font size="19.0" />
+                        </font>
+                     </Text>
+                     <TableView fx:id="allParts" layoutX="426.0" layoutY="118.0" prefHeight="157.0" prefWidth="432.0">
+                        <columns>
+                           <TableColumn fx:id="allPartsID" prefWidth="106.0" text="Part ID" />
+                           <TableColumn fx:id="allPartsPartName" prefWidth="109.0" text="Part Name" />
+                           <TableColumn fx:id="allPartsInventory" prefWidth="105.0" text="Inventory Level" />
+                           <TableColumn fx:id="allPartsPrice" prefWidth="111.0" text="Price Per Unit" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="productParts" layoutX="426.0" layoutY="440.0" prefHeight="157.0" prefWidth="432.0">
+                        <columns>
+                           <TableColumn fx:id="productPartsId" prefWidth="106.0" text="Part ID" />
+                           <TableColumn fx:id="productPartsName" prefWidth="109.0" text="Part Name" />
+                           <TableColumn fx:id="productPartsInventory" prefWidth="105.0" text="Inventory Level" />
+                           <TableColumn fx:id="productPartsPrice" prefWidth="111.0" text="Price Per Unit" />
+                        </columns>
+                     </TableView>
+                     <Button onAction="#searchClick" layoutX="576.0" layoutY="60.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Search" />
+                     <Button onAction="#addClick" layoutX="791.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Add" />
+                     <Button onAction="#deleteClick" layoutX="797.0" layoutY="630.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Delete" />
+                     <Button fx:id="cancelButton" onAction="#cancelClick" layoutX="797.0" layoutY="687.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Cancel" />
+                     <Button fx:id="saveButton" onAction="#saveClick" layoutX="712.0" layoutY="687.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Save" />
+                     <TextField fx:id="partSearchField" layoutX="665.0" layoutY="60.0" />
+                     <TextField fx:id="idField" disable="true" layoutX="139.0" layoutY="183.0" text="Auto Gen - Disabled" />
+                     <TextField fx:id="nameField" layoutX="139.0" layoutY="230.0" promptText="Product Name" />
+                     <TextField fx:id="inventoryField" layoutX="139.0" layoutY="275.0" prefHeight="27.0" prefWidth="83.0" promptText="Inv"/>
+                     <TextField fx:id="priceField" layoutX="139.0" layoutY="317.0" prefHeight="27.0" prefWidth="83.0" promptText="Price" />
+                     <TextField fx:id="maxField" layoutX="139.0" layoutY="363.0" prefHeight="27.0" prefWidth="83.0" promptText="Max" />
+                     <TextField fx:id="minField" layoutX="282.0" layoutY="363.0" prefHeight="27.0" prefWidth="83.0" promptText="Min" />
+                     <Text layoutX="72.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                     <Text layoutX="71.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                     <Text layoutX="70.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+                     <Text layoutX="69.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                     <Text layoutX="71.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+                     <Text layoutX="236.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+                  </children>
+               </Pane>
+            </children></AnchorPane>
+        </Scene>
+    </scene>
+</Stage>

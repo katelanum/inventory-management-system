@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Stage?>
+
+<Stage minHeight="400.0" minWidth="440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.PartScreenController">
+    <scene>
+        <Scene>
+            <AnchorPane prefHeight="200" prefWidth="200">
+            <children>
+               <Pane fx:id="partPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="440.0" style="-fx-background-color: light grey;">
+                  <children>
+                     <Text fx:id="addModifyIdentifier" fill="#1267e5" layoutX="29.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.125" text="Add Part" wrappingWidth="100.005859375">
+                        <font>
+                           <Font size="19.0" />
+                        </font>
+                     </Text>
+                     <RadioButton fx:id="inHouseRadio" layoutX="180.0" layoutY="29.0" mnemonicParsing="false" onAction="#partInhouseRadio" text="In-House" />
+                     <RadioButton fx:id="outsourcedRadio" layoutX="301.0" layoutY="29.0" mnemonicParsing="false" onAction="#partOutsourcedRadio" text="Outsourced" />
+                     <TextField fx:id="partName" layoutX="130.0" layoutY="103.0" promptText="Part Name" />
+                     <TextField fx:id="inventoryLevel" layoutX="130.0" layoutY="145.0" promptText="Inv" />
+                     <TextField fx:id="price" layoutX="130.0" layoutY="187.0" promptText="Price/Cost"  />
+                     <TextField fx:id="maximum" layoutX="130.0" layoutY="226.0" prefHeight="27.0" prefWidth="100.0" promptText="Max" />
+                     <TextField fx:id="minimum" layoutX="301.0" layoutY="226.0" prefHeight="27.0" prefWidth="100.0" promptText="Min" />
+                     <TextField fx:id="machineIdCompanyName" layoutX="130.0" layoutY="271.0" promptText="Mach ID" />
+                     <Text layoutX="23.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                     <Text layoutX="23.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                     <Text layoutX="21.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+                     <Text layoutX="23.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+                     <Text layoutX="25.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+                     <Text layoutX="254.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+                     <Text fx:id="machineIdCompanyNameLong" layoutX="17.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+                     <Label layoutX="129.0" layoutY="74.0" />
+                     <TextField  fx:id="id" disable="true" layoutX="129.0" layoutY="61.0" text="Auto Gen-Disabled" />
+                     <Button fx:id="partPageExit" layoutX="361.0" layoutY="359.0" mnemonicParsing="false" onAction="#partCancel" text="Cancel" />
+                     <Button fx:id="partSave" layoutX="290.0" layoutY="359.0" mnemonicParsing="false" onAction="#partSave" prefHeight="27.0" prefWidth="56.0" text="Save" />
+                  </children>
+               </Pane>
+            </children></AnchorPane>
+        </Scene>
+    </scene>
+</Stage>
